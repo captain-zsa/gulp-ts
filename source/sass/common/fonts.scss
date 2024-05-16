@@ -1,0 +1,17 @@
+/*
+	Если используете другой шрифт – удалите ненужные файлы из fonts и замените в src /inter/ на то, что вам нужно, а также поменяйте вызовы миксинов
+*/
+@mixin font-face($family, $filename: $family, $weight: 400, $style: normal) {
+	@font-face {
+		font-family: '#{$family}';
+		font-display: swap;
+		src: url('../fonts/inter/#{$filename}.woff2') format('woff2');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+@include font-face('Inter', 'inter-regular');
+@include font-face('Inter', 'inter-medium', 500);
+@include font-face('Inter', 'inter-semibold', 600);
+@include font-face('Inter', 'inter-bold', 700);

@@ -1,0 +1,14 @@
+.button {
+    @include clear-button;
+        
+    display: block;
+    font-family: inter;
+    font-size: 20px;
+    line-height: 31px;
+    text-align: center;
+    
+    @media (min-width: 768px) {
+        font-size: 28px;
+        line-height: 43px;
+    }
+}

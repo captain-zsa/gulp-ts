@@ -1,0 +1,13 @@
+/*
+  Использование:
+  @include clear-button;
+*/
+
+@mixin clear-button {
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  margin: 0;
+}

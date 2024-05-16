@@ -1,0 +1,123 @@
+.banners {
+    margin-top: 49px;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+        margin-top: 100px;
+        margin-bottom: 91px;
+    }
+
+    @media (min-width: 1728px) {
+        margin-top: 155px;
+        margin-bottom: 124px;
+    }
+
+    &__swiper {
+        position: relative;
+        overflow: hidden;
+        margin-top: -210px;
+        padding-top: 210px;
+    }
+
+    &__container {
+        border-radius: 30px;
+        background-color: #DC4B54;
+        padding: 40px 11px 20px;
+        position: relative;
+        background-image: url("../img/slick_banner.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: left bottom;
+
+        @media (min-width: 768px) {
+            padding-bottom: 140px;
+            background-size: 95%;
+
+            &::before {
+                position: absolute;
+                background-image: url("../img/banner_foot-tablet.png");
+                background-repeat: no-repeat;
+                width: 499px;
+                height: 499px;
+                left: 2%;
+                bottom: 0;
+                content: '';
+                z-index: 1;
+                filter: drop-shadow(0px -20px 94.5px #00000033);
+            }
+        }
+
+        @media (min-width: 1728px) {
+            background-size: 58%;
+            padding-bottom: 100px;
+
+            &::before {
+                position: absolute;
+                background-image: url("../img/banner_foot.png");
+                background-repeat: no-repeat;
+                width: 803px;
+                height: 803px;
+                left: -100px;
+                bottom: 0px;
+                content: '';
+                filter: drop-shadow(0px -20px 94.5px #00000033);
+            }
+        }
+
+        &--blue {
+            background-color: #4169E1;
+        }
+
+        &--green {
+            background-color: #2E8B57;
+        }
+    }
+
+
+    &__list {
+        @include clear-list;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    &__slider {
+        @media (min-width: 1728px) {
+            margin-left: 48%;
+            margin-top: 48px;
+        }
+    }
+
+    &__pagination {
+        @media (min-width: 768px) {
+            position: absolute;
+            left: auto !important;
+            top: auto !important;
+            bottom: 22px !important;
+            right: 22px !important;
+            z-index: 3;
+            width: auto !important;
+        }
+    }
+
+    &__arrow {
+        @include clear-button;
+
+        background-image: url(../img/banner_arrow-left.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 25px;
+        top: 62%;
+        transform: translateY(-50%);
+        z-index: 3;
+        cursor: pointer;
+
+        &--right {
+            transform: translateY(-50%) rotate(180deg);
+            left: auto;
+            right: 25px;
+        }
+    }
+}

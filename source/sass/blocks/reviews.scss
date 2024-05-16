@@ -1,0 +1,115 @@
+.reviews {
+    &__list {
+        @include clear-list;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 50px;
+        
+        @media (min-width: 1728px) {
+            flex-direction: row;
+            gap: 68px;
+        }
+    }
+    
+    &__title {
+        font-size: 32px;
+        line-height: 44px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 38px;
+        margin-top: 70px;
+        
+        &::before,
+        &::after {
+            display: inline-block;
+            width: 41px;
+            height: 3px;
+            background-color: black;
+            margin: 9px;
+            transform: translateY(-2px);
+            content: '';
+        }
+        
+        @media (min-width: 768px) {
+            margin-bottom: 21px;
+        }
+        
+        @media (min-width: 1728px) {
+            margin-bottom: 51px;
+        }
+        
+        span {
+            @media (max-width: 767px) {
+            display: none;
+            }
+        }
+    }
+    
+    &__avatar {
+        width: 54px;
+        height: 75px;
+        box-shadow: 0px 2.77px 2.21px 0px #00000005,
+        0px 6.65px 5.32px 0px #00000007,
+        0px 12.52px 10.02px 0px #00000009,
+        0px 22.34px 17.87px 0px #0000000B,
+        0px 41.78px 33.42px 0px #0000000D,
+        0px 100px 80px 0px #00000012;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        
+        @media (min-width: 768px) {
+            width: 130px;
+            height: 180px;
+            margin-right: 52px;
+        }
+    }
+    
+    &__item {
+        padding: 25px;
+        background-color: #F3F3F3;
+        border-radius: 25px;
+        border: 2px solid #DEDEDE;
+        
+        @media (min-width: 768px) {
+            padding: 78px 67px;
+        }
+    }
+    
+    &__text {
+        font-size: 18px;
+        line-height: 25px;
+        color: rgba(0, 0, 0, 0.75);
+        margin-bottom: 0px;
+    }
+    
+    &__name {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 39px;
+        margin: 0;
+    }
+    
+    &__rating {
+        margin-bottom: 46px;
+        display: flex;
+        gap: 10px;
+        
+        @media (min-width: 768px) {
+            margin-bottom: 8px;
+        }
+    }
+    
+    &__rating-star {
+        background-color: #FFB800;
+        width: 19px;
+        height: 19px;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    
+        &--half {
+            clip-path: polygon(50% 0, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+    }
+}

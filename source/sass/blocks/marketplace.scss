@@ -1,0 +1,88 @@
+.marketplace {
+    
+    &__row-container {
+        display: flex;
+        background-color: black;
+        width: 100%;
+        overflow: hidden;
+        
+        @media (min-width: 1728px) {
+            display: block;
+        }
+    }
+    
+    &__list {
+        @include clear-list;
+        
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 21px 0px;
+        animation-name: scrolling-marketplace;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        
+        @media (min-width: 768px) {
+            margin: 44px 0px 44px -15px;
+            animation-duration: 15s;
+        }
+        
+        @media (min-width: 1728px) {
+            margin: 56px 0px 66px -15px;
+            animation: none;
+        }
+    }
+    
+    &__list-anim {
+        @include clear-list;
+        
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 21px 0px;
+        animation-name: scrolling-marketplace;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        
+        @media (min-width: 768px) {
+            margin: 44px 0px 44px -15px;
+            animation-duration: 15s;
+        }
+        
+        @media (min-width: 1728px) {
+            display: none;
+        }
+    }
+    
+    &__item img {
+        height: 16px;
+        
+        @media (min-width: 768px) {
+            height: 40px;
+        }
+    }
+    
+    &__item a {
+        padding: 22px 20px;
+        
+        @media (min-width: 768px) {
+            padding: 70px 100px 44px 100px;
+        }
+        
+        @media (min-width: 1728px) {
+            padding: 81px 100px 63px 100px;
+        }
+    }
+    
+    @keyframes scrolling-marketplace {
+        from {
+            transform: translateX(0);
+        }
+        
+        to {
+            transform: translateX(-100%);
+        }
+    }
+}

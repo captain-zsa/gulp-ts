@@ -1,0 +1,195 @@
+.footer {
+    &__container {
+        background-color: black;
+        color: white;
+        padding: 15px 10px 20px;
+        
+        @media (min-width: 768px) {
+            padding: 30px 20px 51px;
+        }
+        
+        @media (min-width: 1728px) {
+            padding: 85px 84px 30px 84px;
+        }
+    }
+    
+    &__slogan {
+        text-transform: capitalize;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        
+        @media (min-width: 768px) {
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+            min-width: 409px;
+        }
+        
+        @media (min-width: 1728px) {
+            margin-bottom: 55px;
+            margin-top: 47px;
+        }
+    }
+    
+    &__social {
+        gap: 30px;
+    }
+    
+    &__rights {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        display: block;
+        margin-bottom: 0;
+        margin-top: 115px;
+        position: relative;
+        font-weight: 400;
+        
+        &::before {
+            display: block;
+            width: 66px;
+            height: 1px;
+            background-color: white;
+            margin: 9px;
+            margin: 0 auto;
+            transform: translateY(-38px);
+            content: '';
+        }
+        
+        @media (min-width: 768px) {
+            margin-top: 100px;
+        }
+        
+        @media (min-width: 1728px) {
+            margin-top: 122px;
+        }
+    }
+    
+    &__subscribe {
+        background-color: white;
+        border-radius: 10px;
+        width: 300px;
+        height: 47px;
+        padding: 15px;
+        display: flex;
+        margin: 0 auto;
+        
+        &::before {
+            display: inline-block;
+            content: '';
+            width: 1px;
+            height: 18px;
+            background-color: black;
+            order: 1;
+        }
+        
+        @media (min-width: 768px) {
+            width: 477px;
+            height: 61px;
+            padding: 20px 20px 20px 37px;
+            
+            &::before {
+                transform: translateY(2px);
+            }
+        }
+    }
+    
+    &__email {
+        @include clear-input;
+        
+        width: 152px;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 500;
+        margin-right: 11px;
+        
+        @media (min-width: 768px) {
+            width: 302px;
+        }
+    }
+    
+    &__button-subscribe {
+        @include clear-button;
+        
+        order: 2;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 500;
+        margin-left: 15px;
+        
+        @media (min-width: 768px) {
+            font-size: 18px;
+            line-height: 22px;
+            margin-left: 21px;
+        }
+    }
+    
+    &__subscribe-description {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 15px;
+        margin-top: 35px;
+        text-align: center;
+        
+        @media (min-width: 768px) {
+            font-size: 24px;
+            line-height: 29px;
+            margin-top: 59px;
+        }
+        
+        @media (min-width: 1728px) {
+            margin-top: 0;
+        }
+    }
+    
+    &__menu {
+        @include clear-list;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+    
+    &__menu-name {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+        margin-bottom: 23px;
+        margin-top: 0;
+    }
+    
+    &__links {
+        @media (max-width: 767px) {
+            display: none;
+        }
+        
+        @media (min-width: 1728px) {
+            order: 2;
+        }
+    }
+    
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    
+    &__subscribe-wrapper {
+        @media (min-width: 768px) and (max-width: 1727px) {
+            width: 100%;;
+        }
+        
+        @media (min-width: 1728px) {
+            order: 1;
+            transform: translateX(-20%);
+        }
+    }
+}
